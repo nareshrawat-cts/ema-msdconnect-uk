@@ -1,4 +1,6 @@
 helix-importer-ui
+dompurify.min.js
 *.min.js
+package-lock.json
 migration-work
 tools/importer
