@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ | ui.content — initial/editable content package for MSD Connect UK.
+ |
+ | PRE-BUILT SKELETON: this module was authored ahead of the AEM archetype so the
+ | homepage JCR + DAM images are ready to deploy. When the archetype reactor is
+ | generated (see docs/aemaacs-fullstack-setup.md), reconcile:
+ |   - <parent> groupId/artifactId/version must match the generated reactor pom.
+ |   - add this module to the reactor <modules> list (if not auto-added).
+ |   - ensure the 'all' package embeds this artifact (embed in all/pom.xml).
+ | Coordinates below assume groupId uk.co.msdconnect / artifactId ema-msdconnect-uk
+ | (matching the archetype command in the setup doc). Adjust if you generate with
+ | different values.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>uk.co.msdconnect</groupId>
+        <artifactId>ema-msdconnect-uk</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>ema-msdconnect-uk.ui.content</artifactId>
+    <packaging>content-package</packaging>
+    <name>MSD Connect UK - UI Content</name>
+    <description>Initial content package (homepage + DAM assets) for /content/msdconnect</description>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>filevault-package-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <group>uk.co.msdconnect</group>
+                    <name>ema-msdconnect-uk.ui.content</name>
+                    <packageType>content</packageType>
+                    <accessControlHandling>merge</accessControlHandling>
+                    <properties>
+                        <cloudManagerTarget>none</cloudManagerTarget>
+                    </properties>
+                    <validatorsSettings>
+                        <jackrabbit-filter>
+                            <options>
+                                <!-- content package covers /content/msdconnect and its DAM assets -->
+                                <validRoots>/content,/content/dam</validRoots>
+                            </options>
+                        </jackrabbit-filter>
+                    </validatorsSettings>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>sling-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
