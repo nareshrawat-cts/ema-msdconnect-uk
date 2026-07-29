@@ -288,7 +288,8 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
+  box-sizing: border-box;
+  max-width: 1306px;
   margin: auto;
   padding: 0 24px;
 }

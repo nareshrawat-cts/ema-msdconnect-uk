@@ -42,10 +42,11 @@ header nav .nav-tools {
 }
 
 header nav .nav-tools ul {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: 16px;
-  max-width: 1264px;
+  max-width: 1306px;
   margin: 0 auto;
   padding: 8px 24px;
   font-size: 13px;
@@ -72,7 +73,7 @@ header nav .nav-primary {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1264px;
+  max-width: 1306px;
   margin: 0 auto;
   padding: 20px 24px;
   border-bottom: 1px solid rgb(230 230 230);
