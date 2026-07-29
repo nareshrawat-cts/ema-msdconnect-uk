@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="cq:Page">
+  <jcr:content cq:template="/libs/core/franklin/templates/page" sling:resourceType="core/franklin/components/page/v1/page" jcr:primaryType="cq:PageContent" jcr:title="MSD Connect - United Kingdom" jcr:description="Welcome to MSD Connect. Find UK product information and Healthcare Professional events, training and resources" modelFields="[jcr:title,jcr:description,keywords]">
+    <root jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/root/v1/root">
+      <section sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" filter="cards-promo" name="Cards Promo">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card Promo" model="card-promo" modelFields="[image,imageAlt,text]" image="https://main--ema-msdconnect-uk--nareshrawat-cts.aem.page/media_1ebac8c944fc18dcb1bb4c9b6762489e452799de6.jpg#width=1600&amp;height=1067" imageAlt="MSD in the UK" text="&lt;p&gt;&lt;h1&gt;&lt;a href&#x3D;&quot;https://www.msd-uk.com/&quot;&gt;MSD in the UK&lt;/a&gt;&lt;/h1&gt;&lt;/p&gt;"></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card Promo" model="card-promo" modelFields="[image,imageAlt,text]" text="&lt;p&gt;&lt;h2&gt;Healthcare Professional Resources&lt;/h2&gt;&lt;/p&gt;&lt;p&gt;This section contains training and resources, materials and promotional information on MSD products for UK healthcare professionals only&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;https://www.msdconnect.co.uk/hcp-resources/&quot;&gt;View our resources&lt;/a&gt;&lt;/p&gt;"></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card Promo" model="card-promo" modelFields="[image,imageAlt,text]" text="&lt;p&gt;&lt;h2&gt;About us&lt;/h2&gt;&lt;/p&gt;&lt;p&gt;Here in the UK, we’re helping to transform the lives of millions of patients and populations by providing innovative medicines, vaccines and services, through our partnerships with the NHS and the work of the inspiring people who make up our company&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;https://www.msd-uk.com/company-overview/&quot;&gt;Learn more about us&lt;/a&gt;&lt;/p&gt;"></item_2>
+          <item_3 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card Promo" model="card-promo" modelFields="[image,imageAlt,text]" image="https://main--ema-msdconnect-uk--nareshrawat-cts.aem.page/media_13fc653514a5987438367f1004c49c5c5a4b3dc0d.jpg#width=1600&amp;height=1067" imageAlt="Our PurposeWe use the power of leading-edge science to save and improve lives around the world" text="&lt;p&gt;&lt;h2&gt;&lt;a href&#x3D;&quot;https://www.msd-uk.com/&quot;&gt;Our Purpose&lt;/a&gt;We use the power of leading-edge science to save and improve lives around the world&lt;/h2&gt;&lt;/p&gt;"></item_3>
+        </block>
+        <columns sling:resourceType="core/franklin/components/columns/v1/columns" jcr:primaryType="nt:unstructured" rows="1" columns="2">
+          <row1 jcr:primaryType="nt:unstructured">
+            <col1 jcr:primaryType="nt:unstructured">
+              <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Guided by Our Values" titleType="h3"/>
+              <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Our employees are united by four values that represent
+                    who we are and how we work together:&lt;br&gt;
+                    patients first; respect for people; ethics and integrity;
+                    and innovation and scientific excellence&lt;/p&gt;"/>
+            </col1>
+            <col2 jcr:primaryType="nt:unstructured">
+              <image sling:resourceType="core/franklin/components/image/v1/image" jcr:primaryType="nt:unstructured" image="https://main--ema-msdconnect-uk--nareshrawat-cts.aem.page/media_1153a9dd531f46b7cc5ef6a12070ddb033a5043f5.jpg#width&#x3D;800&amp;height&#x3D;533" imageAlt=""/>
+            </col2>
+          </row1>
+        </columns>
+      </section>
+      <section_1 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]"></section_1>
+    </root>
+  </jcr:content>
+</jcr:root>
