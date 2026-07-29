@@ -14,3 +14,8 @@ helix-importer-ui
 migration-work/navigation-validation/
 migration-work/footer-validation/
 jcr/
+
+# Removed AEMaaCS-route artifacts (project uses Edge Delivery for publishing)
+jcr-package/
+jcr-package-dam/
+ui.content/
