@@ -221,6 +221,12 @@ header nav .nav-sections a:hover {
     box-shadow: none;
   }
 
+  /* clear the mobile-panel underline so it doesn't double up with the bar below */
+  header nav .nav-sections li.active a,
+  header nav .nav-sections a:hover {
+    box-shadow: none;
+  }
+
   /* active page + hover: 6px teal bar dropped to the header's bottom border
      line (matches the source, where the underline sits ~24px below the text) */
   header nav .nav-sections li.active a::after,
