@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "projectType": "doc"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.msdconnect.co.uk/"
+      ],
+      "representativeUrl": "https://www.msdconnect.co.uk/",
+      "coverageGaps": [],
+      "description": "MSD Connect UK homepage - hero banner, HCP resources CTA, about us / our purpose columns, values section with figure, and footer.",
+      "blocks": [
+        {
+          "name": "cards-promo",
+          "instances": [
+            ".mhh-mcn-v1-hero"
+          ]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            ".mhh-mcn-columns--vertical-alignment-center"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc3",
+          "name": "main-content",
+          "selector": "#mhh_mcn_content",
+          "style": null,
+          "blocks": [
+            "cards-promo",
+            "columns-feature"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

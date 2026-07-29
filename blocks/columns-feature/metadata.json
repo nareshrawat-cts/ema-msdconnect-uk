@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-07-29T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.msdconnect.co.uk/",
+    "originPage": "MSD Connect UK homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "feature",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph beside a single image (text | image), vertically centered",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "values / mission statement rows with a supporting photo",
+      "side-by-side text-and-image informational sections",
+      "two-column feature callouts on tinted backgrounds"
+    ],
+    "notSuitableFor": [
+      "grids of repeatable items (use cards)",
+      "tabular data",
+      "single column of content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-29T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "doc",
+  "sites": {
+    "ema-msdconnect-uk": {
+      "previewOrg": "nareshrawat-cts",
+      "previewSite": "ema-msdconnect-uk",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}
