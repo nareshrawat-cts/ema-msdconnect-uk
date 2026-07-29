@@ -6,12 +6,16 @@ import { loadFragment } from '../fragment/fragment.js';
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
+  // Resolve the footer fragment: explicit metadata, then the published root path
+  // (/footer on the backend), then the local dev path (/content/footer).
   const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/content/footer';
-  let fragment = await loadFragment(footerPath);
-  if (!fragment) {
-    fragment = await loadFragment('/content/footer');
+  let fragment = null;
+  if (footerMeta) {
+    fragment = await loadFragment(new URL(footerMeta, window.location).pathname);
   }
+  if (!fragment) fragment = await loadFragment('/footer');
+  if (!fragment) fragment = await loadFragment('/content/footer');
+  if (!fragment) return;
 
   block.textContent = '';
   const footer = document.createElement('div');

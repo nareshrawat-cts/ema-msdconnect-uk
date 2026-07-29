@@ -35,12 +35,16 @@ function closeOnEscape(nav) {
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
+  // Resolve the nav fragment: explicit metadata, then the published root path
+  // (/nav on the backend), then the local dev path (/content/nav).
   const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/content/nav';
-  let fragment = await loadFragment(navPath);
-  if (!fragment) {
-    fragment = await loadFragment('/content/nav');
+  let fragment = null;
+  if (navMeta) {
+    fragment = await loadFragment(new URL(navMeta, window.location).pathname);
   }
+  if (!fragment) fragment = await loadFragment('/nav');
+  if (!fragment) fragment = await loadFragment('/content/nav');
+  if (!fragment) return;
 
   block.textContent = '';
   const nav = document.createElement('nav');
