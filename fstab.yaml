@@ -1,5 +1,4 @@
 mountpoints:
   /:
-    url: "https://author-p8452-e1321974.adobeaemcloud.com/bin/franklin.delivery/nareshrawat-cts/ema-msdconnect-uk/main"
+    url: "https://content.da.live/nareshrawat-cts/ema-msdconnect-uk/"
     type: "markup"
-    suffix: ".html"
