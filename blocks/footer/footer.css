@@ -111,4 +111,23 @@ footer .footer p.footer-ae-reporting a:any-link {
     padding-left: 32px;
     padding-right: 32px;
   }
+
+  /* Match live: nav links on the left, brand logos stacked on the right,
+     both sharing the top footer band. The logos block is pulled up next to
+     the nav and right-aligned; the nav is constrained so its links wrap. */
+  footer .footer .footer-nav {
+    padding-bottom: 0;
+  }
+
+  footer .footer .footer-nav ul {
+    max-width: 60%;
+  }
+
+  footer .footer .footer-logos {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    margin-top: -90px;
+    padding-top: 0;
+  }
 }
