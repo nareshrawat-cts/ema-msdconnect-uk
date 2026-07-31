@@ -2,9 +2,9 @@
   "type": "doc",
   "sites": {
     "ema-msdconnect-uk": {
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json",
       "previewOrg": "nareshrawat-cts",
-      "previewSite": "ema-msdconnect-uk",
-      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+      "previewSite": "ema-msdconnect-uk"
     }
   }
 }
