@@ -74,9 +74,9 @@
     flex: 0 1 33.3%;
   }
 
-  /* Source renders the photo smaller than its column, aligned to the right */
+  /* Source renders the photo smaller than its column, centered within it */
   .columns-feature > div > .columns-feature-img-col img {
     max-width: 267px;
-    margin-left: auto;
+    margin: 0 auto;
   }
 }
