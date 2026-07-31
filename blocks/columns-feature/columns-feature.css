@@ -6,9 +6,11 @@
   --columns-feature-bg: rgb(225 239 238); /* pale teal tint */
 }
 
-/* Tinted panel (source: wrapping column bg + 20px padding + 10px margin) */
+/* Tinted panel (source: wrapping column bg + 20px padding + 10px margin).
+   Cancel the section wrapper's horizontal padding so the box spans the full
+   content container width, matching the cards box above it. */
 .columns-feature {
-  margin: 10px 0;
+  margin: 10px -24px;
   padding: 20px;
   background-color: var(--columns-feature-bg);
   color: var(--text-color);
@@ -56,6 +58,11 @@
 }
 
 @media (width >= 900px) {
+  /* full-bleed to the content container edges (desktop section padding is 32px) */
+  .columns-feature {
+    margin: 10px -32px;
+  }
+
   /* Two columns side by side, vertically centered (source: align-items center) */
   .columns-feature > div {
     flex-direction: row;
