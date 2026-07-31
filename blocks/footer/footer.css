@@ -126,6 +126,12 @@ footer .footer p.footer-ae-reporting a:any-link {
     max-width: 60%;
   }
 
+  /* Match live: legal/copyright text and the AE box occupy the left ~60%,
+     leaving room for the logos on the right (they don't span full width). */
+  footer .footer .footer-legal {
+    max-width: 60%;
+  }
+
   footer .footer .footer-logos {
     flex-direction: column;
     align-items: flex-end;
