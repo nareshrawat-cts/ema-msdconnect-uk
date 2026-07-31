@@ -73,19 +73,18 @@ export default async function decorate(block) {
   // The logo is a crisp PNG (text + transparency). EDS auto-decoration wraps it
   // in a <picture> that serves lossy WebP (format=webply), which blurs the mark.
   // Replace it with a plain lossless PNG <img> at ~2x the 210px display width.
-  const brandPicture = navBrand?.querySelector('picture');
-  if (brandPicture) {
-    const orig = brandPicture.querySelector('img');
-    const rawSrc = (orig?.getAttribute('src') || '').split('?')[0];
-    if (rawSrc) {
-      const logo = document.createElement('img');
-      logo.src = `${rawSrc}?width=420&format=png&optimize=medium`;
-      logo.alt = orig?.getAttribute('alt') || 'MSD Connect UK';
-      logo.width = 210;
-      logo.height = 37;
-      logo.loading = 'eager';
-      brandPicture.replaceWith(logo);
-    }
+  // Only rewrite when the source is a real EDS media asset (avoids about:error
+  // or unresolved paths becoming a broken <img>).
+  const brandImg = navBrand?.querySelector('picture img, img');
+  const brandRaw = (brandImg?.getAttribute('src') || '').split('?')[0];
+  if (brandImg && /\/media_[a-f0-9]+\.\w+$/.test(brandRaw)) {
+    const logo = document.createElement('img');
+    logo.src = `${brandRaw}?width=420&format=png&optimize=medium`;
+    logo.alt = brandImg.getAttribute('alt') || 'MSD Connect UK';
+    logo.width = 210;
+    logo.height = 37;
+    logo.loading = 'eager';
+    (brandImg.closest('picture') || brandImg).replaceWith(logo);
   }
 
   // mark the active top-level link based on current path
