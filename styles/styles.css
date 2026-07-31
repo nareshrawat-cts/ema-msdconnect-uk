@@ -322,3 +322,10 @@ main .section.dark {
 main .section.dark a:any-link {
   color: #fff;
 }
+
+/* page-level job code / date of preparation (matches live: 14px, 24px margin) */
+main .footer-job-number {
+  margin: 24px 0;
+  font-size: 14px;
+  color: var(--text-color);
+}
