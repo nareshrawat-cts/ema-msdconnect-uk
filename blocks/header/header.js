@@ -70,6 +70,24 @@ export default async function decorate(block) {
     if (container) container.className = '';
   }
 
+  // The logo is a crisp PNG (text + transparency). EDS auto-decoration wraps it
+  // in a <picture> that serves lossy WebP (format=webply), which blurs the mark.
+  // Replace it with a plain lossless PNG <img> at ~2x the 210px display width.
+  const brandPicture = navBrand?.querySelector('picture');
+  if (brandPicture) {
+    const orig = brandPicture.querySelector('img');
+    const rawSrc = (orig?.getAttribute('src') || '').split('?')[0];
+    if (rawSrc) {
+      const logo = document.createElement('img');
+      logo.src = `${rawSrc}?width=420&format=png&optimize=medium`;
+      logo.alt = orig?.getAttribute('alt') || 'MSD Connect UK';
+      logo.width = 210;
+      logo.height = 37;
+      logo.loading = 'eager';
+      brandPicture.replaceWith(logo);
+    }
+  }
+
   // mark the active top-level link based on current path
   if (navSections) {
     const here = window.location.pathname.replace(/\/$/, '') || '/';
